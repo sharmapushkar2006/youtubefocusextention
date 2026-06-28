@@ -7,7 +7,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
         const video = document.querySelector('video');
         if (video) {
             currentVideo = video;
-            createOverlay(true); // Trigger the initial setup
+            createOverlay(true);
         } else {
             alert("No video element found on this page.");
         }
@@ -28,7 +28,7 @@ function createOverlay(isStarting) {
         overlay.style.flexDirection = 'column';
         overlay.style.justifyContent = 'center';
         overlay.style.alignItems = 'center';
-        overlay.style.zIndex = '2147483647'; // Maximum possible z-index
+        overlay.style.zIndex = '2147483647'; 
         overlay.style.fontFamily = 'Arial, sans-serif';
         document.body.appendChild(overlay);
     }
