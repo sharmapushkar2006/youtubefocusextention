@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Video Focus Mode",
+  "version": "1.0",
+  "description": "Traps the user in a focus overlay if they exit full-screen before a video finishes.",
+  "permissions": ["activeTab", "scripting"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Enable Focus Mode on Current Video"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "all_frames": true
+    }
+  ]
+}
