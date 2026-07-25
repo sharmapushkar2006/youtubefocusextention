@@ -1,20 +1,48 @@
 {
   "manifest_version": 3,
-  "name": "Video Focus Mode",
-  "version": "1.0",
-  "description": "Traps the user in a focus overlay if they exit full-screen before a video finishes.",
-  "permissions": ["activeTab", "scripting"],
+  "name": "Focus",
+  "description": "Stay focused while learning on YouTube.",
+  "version": "2.0",
+
+  "permissions": [
+    "storage",
+    "tabs",
+    "activeTab",
+    "scripting"
+  ],
+
+  "host_permissions": [
+    "*://*.youtube.com/*",
+    "*://*.instagram.com/*",
+    "*://*.reddit.com/*"
+  ],
+
   "background": {
     "service_worker": "background.js"
   },
+
   "action": {
-    "default_title": "Enable Focus Mode on Current Video"
+    "default_popup": "popup.html",
+    "default_title": "FocusTube"
   },
+
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
-      "js": ["content.js"],
-      "all_frames": true
+      "matches": [
+        "*://*.youtube.com/*",
+        "*://*.instagram.com/*",
+        "*://*.reddit.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
     }
-  ]
+  ],
+
+  "icons": {
+    "16": "icons/16.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  }
 }
