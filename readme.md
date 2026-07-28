@@ -11,33 +11,33 @@
 
 **File Structure**
 
-  *To use this extension, ensure your project directory contains the following three files exactly as you created them:*
+*To use this extension, ensure your project directory contains the following three files exactly as you created them:*
 
-  >><u>manifest.json</u>: Uses Manifest V3 and defines the extension's name, description, and required activeTab and scripting permissions. It also configures the background service worker and content scripts.  
+>><u>manifest.json</u>: Uses Manifest V3 and defines the extension's name, description, and required activeTab and scripting permissions. It also configures the background service worker and content scripts.  
 
-  >><u>background.js</u>: Listens for when the user clicks the extension icon and sends an enable_focus message to the active tab.  
+>><u>background.js</u>: Listens for when the user clicks the extension icon and sends an enable_focus message to the active tab.  
 
-  >><u>content.js</u>: Injects into all web pages. It listens for the enable_focus message, targets the <video> element, manages the full-screen requests, and controls the focus mode overlays.  
+>><u>content.js</u>: Injects into all web pages. It listens for the enable_focus message, targets the <video> element, manages the full-screen requests, and controls the focus mode overlays.  
 
 **Installation Instructions**
 
-  >>Since this is a custom extension, you will need to load it into Chrome in "Developer mode."
+>>Since this is a custom extension, you will need to load it into Chrome in "Developer mode."
 
-  >>Create a new folder on your computer named YoutubeFocusMode(Or any other name of your choice).
+>>Create a new folder on your computer named YoutubeFocusMode(Or any other name of your choice).
 
-  >>Save the provided code snippets into three separate files (manifest.json, background.js, and content.js) inside this folder.
+>>Save the provided code snippets into three separate files (manifest.json, background.js, and content.js) inside this folder.
 
-  >>Open the Google Chrome browser.
+>>Open the Google Chrome browser.
 
-  >>Type chrome://extensions/ into the URL address bar and press Enter.
+>>Type chrome://extensions/ into the URL address bar and press Enter.
 
-  >>In the top right corner of the Extensions page, toggle the switch to turn on Developer mode.
+>>In the top right corner of the Extensions page, toggle the switch to turn on Developer mode.
 
-  >>Click the Load unpacked button that appears in the top left corner.
+>>Click the Load unpacked button that appears in the top left corner.
 
-  >>Select the Video Focus Mode folder you created in Step 1.
+>>Select the Video Focus Mode folder you created in Step 1.
 
-  >>The extension should now appear in your list of installed extensions.
+>>The extension should now appear in your list of installed extensions.
 
 **How to Use**
 Navigate to any video on **youtube.com**.   
