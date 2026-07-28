@@ -1,4 +1,6 @@
-# Video Focus Mode
+<p align="center">
+   <span style="font-size: 2em; font-weight: bold;">YouTube Focus Mode</span>
+</p>
 
 Video Focus Mode is a small Chrome/Chromium extension (Manifest V3) that helps you concentrate by forcing a video to play in fullscreen until it finishes. When enabled, the extension shows a full-page overlay and prevents leaving fullscreen until the current video ends.
 
